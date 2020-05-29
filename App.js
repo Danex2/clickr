@@ -19,9 +19,20 @@ export default function App() {
       <View style={{ flex: 2 }}>
         <Button
           onPress={() => setCount((prevCount) => prevCount + 1)}
-          title="Tap to update count!"
+          title="Click"
           style={styles.button}
           disabled={timer === 0}
+        />
+      </View>
+      <View style={{ flex: 2 }}>
+        <Button
+          onPress={() => {
+            setCount(0);
+            setTimer(60);
+          }}
+          title="Reset!"
+          style={styles.button}
+          disabled={timer > 0}
         />
       </View>
       <View style={{ flex: 1 }}>
